@@ -5,24 +5,28 @@
 package jsii
 
 import (
-	_          "embed"
+	_                   "embed"
 
-	_jsii_     "github.com/aws/jsii-runtime-go/runtime"
+	_jsii_              "github.com/aws/jsii-runtime-go/runtime"
 
-	awscdk     "github.com/aws/aws-cdk-go/awscdk/v2/jsii"
-	constructs "github.com/aws/constructs-go/constructs/v10/jsii"
+	awscdk              "github.com/aws/aws-cdk-go/awscdk/v2/jsii"
+	awscdkgluealpha     "github.com/aws/aws-cdk-go/awscdkgluealpha/v2/jsii"
+	awscdkredshiftalpha "github.com/aws/aws-cdk-go/awscdkredshiftalpha/v2/jsii"
+	constructs          "github.com/aws/constructs-go/constructs/v10/jsii"
 )
 
-//go:embed cdklabs-cdk-appflow-0.0.1.tgz
+//go:embed cdklabs-cdk-appflow-0.0.2.tgz
 var tarball []byte
 
 // Initialize loads the necessary packages in the @jsii/kernel to support the enclosing module.
 // The implementation is idempotent (and hence safe to be called over and over).
 func Initialize() {
 	// Ensure all dependencies are initialized
+	awscdkgluealpha.Initialize()
+	awscdkredshiftalpha.Initialize()
 	awscdk.Initialize()
 	constructs.Initialize()
 
 	// Load this library into the kernel
-	_jsii_.Load("@cdklabs/cdk-appflow", "0.0.1", tarball)
+	_jsii_.Load("@cdklabs/cdk-appflow", "0.0.2", tarball)
 }
