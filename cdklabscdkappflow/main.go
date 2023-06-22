@@ -841,6 +841,94 @@ func init() {
 		"@cdklabs/cdk-appflow.S3SourceProps",
 		reflect.TypeOf((*S3SourceProps)(nil)).Elem(),
 	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.SAPOdataBasicAuthSettings",
+		reflect.TypeOf((*SAPOdataBasicAuthSettings)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.SAPOdataConnectorProfile",
+		reflect.TypeOf((*SAPOdataConnectorProfile)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "arn", GoGetter: "Arn"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileCredentials", GoMethod: "BuildConnectorProfileCredentials"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileProperties", GoMethod: "BuildConnectorProfileProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "credentials", GoGetter: "Credentials"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "tryAddNodeDependency", GoMethod: "TryAddNodeDependency"},
+		},
+		func() interface{} {
+			j := jsiiProxy_SAPOdataConnectorProfile{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ConnectorProfileBase)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.SAPOdataConnectorProfileProps",
+		reflect.TypeOf((*SAPOdataConnectorProfileProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.SAPOdataDestination",
+		reflect.TypeOf((*SAPOdataDestination)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "bind", GoMethod: "Bind"},
+			_jsii_.MemberProperty{JsiiProperty: "connectorType", GoGetter: "ConnectorType"},
+		},
+		func() interface{} {
+			j := jsiiProxy_SAPOdataDestination{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IDestination)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.SAPOdataDestinationProps",
+		reflect.TypeOf((*SAPOdataDestinationProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.SAPOdataOAuthEndpoints",
+		reflect.TypeOf((*SAPOdataOAuthEndpoints)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.SAPOdataOAuthFlows",
+		reflect.TypeOf((*SAPOdataOAuthFlows)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.SAPOdataOAuthRefreshTokenGrantFlow",
+		reflect.TypeOf((*SAPOdataOAuthRefreshTokenGrantFlow)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.SAPOdataOAuthSettings",
+		reflect.TypeOf((*SAPOdataOAuthSettings)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.SAPOdataSource",
+		reflect.TypeOf((*SAPOdataSource)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "bind", GoMethod: "Bind"},
+			_jsii_.MemberProperty{JsiiProperty: "connectorType", GoGetter: "ConnectorType"},
+		},
+		func() interface{} {
+			j := jsiiProxy_SAPOdataSource{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ISource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.SAPOdataSourceProps",
+		reflect.TypeOf((*SAPOdataSourceProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.SAPOdataSuccessResponseHandlingConfiguration",
+		reflect.TypeOf((*SAPOdataSuccessResponseHandlingConfiguration)(nil)).Elem(),
+	)
 	_jsii_.RegisterClass(
 		"@cdklabs/cdk-appflow.SalesforceConnectorProfile",
 		reflect.TypeOf((*SalesforceConnectorProfile)(nil)).Elem(),
