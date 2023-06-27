@@ -18,6 +18,8 @@ type IFlow interface {
 	// Experimental.
 	Arn() *string
 	// Experimental.
+	Name() *string
+	// Experimental.
 	Type() FlowType
 }
 
@@ -63,6 +65,16 @@ func (j *jsiiProxy_IFlow) Arn() *string {
 	_jsii_.Get(
 		j,
 		"arn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IFlow) Name() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"name",
 		&returns,
 	)
 	return returns
