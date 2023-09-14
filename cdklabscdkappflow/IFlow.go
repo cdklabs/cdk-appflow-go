@@ -15,10 +15,13 @@ type IFlow interface {
 	OnRunCompleted(id *string, options *awsevents.OnEventOptions) awsevents.Rule
 	// Experimental.
 	OnRunStarted(id *string, options *awsevents.OnEventOptions) awsevents.Rule
+	// The ARN of the flow.
 	// Experimental.
 	Arn() *string
+	// The name of the flow.
 	// Experimental.
 	Name() *string
+	// The type of the flow.
 	// Experimental.
 	Type() FlowType
 }

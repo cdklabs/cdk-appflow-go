@@ -178,6 +178,14 @@ func init() {
 		reflect.TypeOf((*FlowProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterEnum(
+		"@cdklabs/cdk-appflow.FlowStatus",
+		reflect.TypeOf((*FlowStatus)(nil)).Elem(),
+		map[string]interface{}{
+			"ACTIVE": FlowStatus_ACTIVE,
+			"SUSPENDED": FlowStatus_SUSPENDED,
+		},
+	)
+	_jsii_.RegisterEnum(
 		"@cdklabs/cdk-appflow.FlowType",
 		reflect.TypeOf((*FlowType)(nil)).Elem(),
 		map[string]interface{}{

@@ -25,8 +25,13 @@ type OnScheduleFlowProps struct {
 	Transforms *[]ITransform `field:"optional" json:"transforms" yaml:"transforms"`
 	// Experimental.
 	Validations *[]IValidation `field:"optional" json:"validations" yaml:"validations"`
-	// Experimental.
+	// Deprecated: . This property is deprecated and will be removed in a future release. Use {@link status} instead
 	AutoActivate *bool `field:"optional" json:"autoActivate" yaml:"autoActivate"`
+	// The status to set on the flow.
+	//
+	// Use this over {@link autoActivate}.
+	// Experimental.
+	Status FlowStatus `field:"optional" json:"status" yaml:"status"`
 	// Experimental.
 	PullConfig *DataPullConfig `field:"required" json:"pullConfig" yaml:"pullConfig"`
 	// Experimental.

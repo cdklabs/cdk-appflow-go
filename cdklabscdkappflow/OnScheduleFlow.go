@@ -13,6 +13,7 @@ import (
 type OnScheduleFlow interface {
 	TriggeredFlowBase
 	IFlow
+	// The ARN of the flow.
 	// Experimental.
 	Arn() *string
 	// The environment this resource belongs to.
@@ -25,6 +26,7 @@ type OnScheduleFlow interface {
 	// that might be different than the stack they were imported into.
 	// Experimental.
 	Env() *awscdk.ResourceEnvironment
+	// The name of the flow.
 	// Experimental.
 	Name() *string
 	// The tree node.
@@ -42,6 +44,7 @@ type OnScheduleFlow interface {
 	// The stack in which this resource is defined.
 	// Experimental.
 	Stack() awscdk.Stack
+	// The type of the flow.
 	// Experimental.
 	Type() FlowType
 	// Apply the given removal policy to this resource.
@@ -247,6 +250,22 @@ func OnScheduleFlow_IsResource(construct constructs.IConstruct) *bool {
 		"@cdklabs/cdk-appflow.OnScheduleFlow",
 		"isResource",
 		[]interface{}{construct},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func OnScheduleFlow_SetStatus(autoActivate *bool, status FlowStatus) FlowStatus {
+	_init_.Initialize()
+
+	var returns FlowStatus
+
+	_jsii_.StaticInvoke(
+		"@cdklabs/cdk-appflow.OnScheduleFlow",
+		"setStatus",
+		[]interface{}{autoActivate, status},
 		&returns,
 	)
 

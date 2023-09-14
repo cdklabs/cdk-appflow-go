@@ -27,6 +27,8 @@ type FlowBaseProps struct {
 	// Experimental.
 	Type FlowType `field:"required" json:"type" yaml:"type"`
 	// Experimental.
+	Status FlowStatus `field:"optional" json:"status" yaml:"status"`
+	// Experimental.
 	TriggerConfig *TriggerConfig `field:"optional" json:"triggerConfig" yaml:"triggerConfig"`
 }
 
