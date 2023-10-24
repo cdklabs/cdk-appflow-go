@@ -1,6 +1,7 @@
 package cdklabscdkappflow
 
 
+// The properties for the EventBridge destination.
 // Experimental.
 type EventBridgeDestinationProps struct {
 	// Experimental.

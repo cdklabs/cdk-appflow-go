@@ -7,6 +7,7 @@ import (
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsappflow"
 )
 
+// This class represents AppFlow's EventBridge destination.
 // Experimental.
 type EventBridgeDestination interface {
 	IDestination

@@ -232,8 +232,8 @@ func init() {
 		reflect.TypeOf((*GoogleAnalytics4ConnectorProfileProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
-		"@cdklabs/cdk-appflow.GoogleAnalytics4OAuthEndpointsSettings",
-		reflect.TypeOf((*GoogleAnalytics4OAuthEndpointsSettings)(nil)).Elem(),
+		"@cdklabs/cdk-appflow.GoogleAnalytics4OAuthEndpoints",
+		reflect.TypeOf((*GoogleAnalytics4OAuthEndpoints)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/cdk-appflow.GoogleAnalytics4OAuthFlow",
@@ -1214,6 +1214,66 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdklabs/cdk-appflow.SlackSourceProps",
 		reflect.TypeOf((*SlackSourceProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.SnowflakeBasicAuthSettings",
+		reflect.TypeOf((*SnowflakeBasicAuthSettings)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.SnowflakeConnectorProfile",
+		reflect.TypeOf((*SnowflakeConnectorProfile)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "arn", GoGetter: "Arn"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileCredentials", GoMethod: "BuildConnectorProfileCredentials"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileProperties", GoMethod: "BuildConnectorProfileProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "credentials", GoGetter: "Credentials"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "integrationRole", GoGetter: "IntegrationRole"},
+			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "tryAddNodeDependency", GoMethod: "TryAddNodeDependency"},
+		},
+		func() interface{} {
+			j := jsiiProxy_SnowflakeConnectorProfile{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ConnectorProfileBase)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.SnowflakeConnectorProfileProps",
+		reflect.TypeOf((*SnowflakeConnectorProfileProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.SnowflakeDestination",
+		reflect.TypeOf((*SnowflakeDestination)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "bind", GoMethod: "Bind"},
+			_jsii_.MemberProperty{JsiiProperty: "connectorType", GoGetter: "ConnectorType"},
+		},
+		func() interface{} {
+			j := jsiiProxy_SnowflakeDestination{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IDestination)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.SnowflakeDestinationObject",
+		reflect.TypeOf((*SnowflakeDestinationObject)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.SnowflakeDestinationProps",
+		reflect.TypeOf((*SnowflakeDestinationProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.SnowflakeStorageIntegration",
+		reflect.TypeOf((*SnowflakeStorageIntegration)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/cdk-appflow.Task",
