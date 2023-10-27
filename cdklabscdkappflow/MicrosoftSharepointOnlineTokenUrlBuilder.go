@@ -5,6 +5,7 @@ import (
 	_init_ "github.com/cdklabs/cdk-appflow-go/cdklabscdkappflow/jsii"
 )
 
+// A utility class for building Microsoft Online token URLs.
 // Experimental.
 type MicrosoftSharepointOnlineTokenUrlBuilder interface {
 }
@@ -41,17 +42,14 @@ func NewMicrosoftSharepointOnlineTokenUrlBuilder_Override(m MicrosoftSharepointO
 }
 
 // Experimental.
-func MicrosoftSharepointOnlineTokenUrlBuilder_BuildFromTenant(tenantId *string) *string {
+func MicrosoftSharepointOnlineTokenUrlBuilder_BuildTokenUrl(tenantId *string) *string {
 	_init_.Initialize()
 
-	if err := validateMicrosoftSharepointOnlineTokenUrlBuilder_BuildFromTenantParameters(tenantId); err != nil {
-		panic(err)
-	}
 	var returns *string
 
 	_jsii_.StaticInvoke(
 		"@cdklabs/cdk-appflow.MicrosoftSharepointOnlineTokenUrlBuilder",
-		"buildFromTenant",
+		"buildTokenUrl",
 		[]interface{}{tenantId},
 		&returns,
 	)

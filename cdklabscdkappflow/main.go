@@ -540,6 +540,10 @@ func init() {
 		reflect.TypeOf((*MicrosoftSharepointOnlineOAuthSettings)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.MicrosoftSharepointOnlineObject",
+		reflect.TypeOf((*MicrosoftSharepointOnlineObject)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
 		"@cdklabs/cdk-appflow.MicrosoftSharepointOnlineRefreshTokenGrantFlow",
 		reflect.TypeOf((*MicrosoftSharepointOnlineRefreshTokenGrantFlow)(nil)).Elem(),
 	)

@@ -7,7 +7,7 @@ import (
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsappflow"
 )
 
-// A class that represents a Google Analytics v4 Source.
+// A class that represents a Microsoft Sharepoint Online Source.
 // Experimental.
 type MicrosoftSharepointOnlineSource interface {
 	ISource

@@ -10,6 +10,9 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// A class that represents a Microsoft Sharepoint Online Connector Profile.
+//
+// This connector profile allows to transfer document libraries residing on a Microsoft Sharepoint Online's site to Amazon S3.
 // Experimental.
 type MicrosoftSharepointOnlineConnectorProfile interface {
 	ConnectorProfileBase
