@@ -56,6 +56,8 @@ func NewTransform_Override(t Transform, tasks *[]ITask) {
 // Returns: a.
 // See: Transform instance.
 //
+// Default: '*'.
+//
 // Experimental.
 func Transform_Mask(field interface{}, mask *string) ITransform {
 	_init_.Initialize()

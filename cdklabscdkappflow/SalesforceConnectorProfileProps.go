@@ -15,6 +15,8 @@ type SalesforceConnectorProfileProps struct {
 	InstanceUrl *string `field:"required" json:"instanceUrl" yaml:"instanceUrl"`
 	// Experimental.
 	OAuth *SalesforceOAuthSettings `field:"required" json:"oAuth" yaml:"oAuth"`
+	// Default: false.
+	//
 	// Experimental.
 	IsSandbox *bool `field:"optional" json:"isSandbox" yaml:"isSandbox"`
 }

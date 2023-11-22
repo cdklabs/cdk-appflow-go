@@ -37,6 +37,8 @@ type SnowflakeConnectorProfileProps struct {
 	// Experimental.
 	Region *string `field:"optional" json:"region" yaml:"region"`
 	// The name of the Snowflake schema.
+	// Default: PUBLIC.
+	//
 	// Experimental.
 	Schema *string `field:"optional" json:"schema" yaml:"schema"`
 }

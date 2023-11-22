@@ -11,6 +11,8 @@ type ScheduleProperties struct {
 	// Experimental.
 	EndTime *time.Time `field:"optional" json:"endTime" yaml:"endTime"`
 	// Timestamp for the records to import from the connector in the first flow run.
+	// Default: 30 days back from the initial frow run.
+	//
 	// Experimental.
 	FirstExecutionFrom *time.Time `field:"optional" json:"firstExecutionFrom" yaml:"firstExecutionFrom"`
 	// Experimental.
