@@ -490,6 +490,92 @@ func init() {
 		"@cdklabs/cdk-appflow.MarketoSourceProps",
 		reflect.TypeOf((*MarketoSourceProps)(nil)).Elem(),
 	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.MicrosoftDynamics365ApiUrlBuilder",
+		reflect.TypeOf((*MicrosoftDynamics365ApiUrlBuilder)(nil)).Elem(),
+		nil, // no members
+		func() interface{} {
+			return &jsiiProxy_MicrosoftDynamics365ApiUrlBuilder{}
+		},
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/cdk-appflow.MicrosoftDynamics365ApiVersion",
+		reflect.TypeOf((*MicrosoftDynamics365ApiVersion)(nil)).Elem(),
+		map[string]interface{}{
+			"V9_2": MicrosoftDynamics365ApiVersion_V9_2,
+		},
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.MicrosoftDynamics365ConnectorProfile",
+		reflect.TypeOf((*MicrosoftDynamics365ConnectorProfile)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "arn", GoGetter: "Arn"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileCredentials", GoMethod: "BuildConnectorProfileCredentials"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileProperties", GoMethod: "BuildConnectorProfileProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "credentials", GoGetter: "Credentials"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "tryAddNodeDependency", GoMethod: "TryAddNodeDependency"},
+		},
+		func() interface{} {
+			j := jsiiProxy_MicrosoftDynamics365ConnectorProfile{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ConnectorProfileBase)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.MicrosoftDynamics365ConnectorProfileProps",
+		reflect.TypeOf((*MicrosoftDynamics365ConnectorProfileProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.MicrosoftDynamics365OAuthEndpointsSettings",
+		reflect.TypeOf((*MicrosoftDynamics365OAuthEndpointsSettings)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.MicrosoftDynamics365OAuthFlow",
+		reflect.TypeOf((*MicrosoftDynamics365OAuthFlow)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.MicrosoftDynamics365OAuthSettings",
+		reflect.TypeOf((*MicrosoftDynamics365OAuthSettings)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.MicrosoftDynamics365RefreshTokenGrantFlow",
+		reflect.TypeOf((*MicrosoftDynamics365RefreshTokenGrantFlow)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.MicrosoftDynamics365Source",
+		reflect.TypeOf((*MicrosoftDynamics365Source)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "bind", GoMethod: "Bind"},
+			_jsii_.MemberProperty{JsiiProperty: "connectorType", GoGetter: "ConnectorType"},
+		},
+		func() interface{} {
+			j := jsiiProxy_MicrosoftDynamics365Source{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ISource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.MicrosoftDynamics365SourceProps",
+		reflect.TypeOf((*MicrosoftDynamics365SourceProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.MicrosoftDynamics365TokenUrlBuilder",
+		reflect.TypeOf((*MicrosoftDynamics365TokenUrlBuilder)(nil)).Elem(),
+		nil, // no members
+		func() interface{} {
+			return &jsiiProxy_MicrosoftDynamics365TokenUrlBuilder{}
+		},
+	)
 	_jsii_.RegisterEnum(
 		"@cdklabs/cdk-appflow.MicrosoftSharepointOnlineApiVersion",
 		reflect.TypeOf((*MicrosoftSharepointOnlineApiVersion)(nil)).Elem(),
