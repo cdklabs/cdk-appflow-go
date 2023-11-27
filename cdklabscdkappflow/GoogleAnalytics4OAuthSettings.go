@@ -1,5 +1,8 @@
 package cdklabscdkappflow
 
+import (
+	"github.com/aws/aws-cdk-go/awscdk/v2"
+)
 
 // Experimental.
 type GoogleAnalytics4OAuthSettings struct {
@@ -9,7 +12,7 @@ type GoogleAnalytics4OAuthSettings struct {
 	// Default: Retrieves a fresh accessToken with the information in the [flow property]{@link GoogleAnalytics4OAuthSettings#flow}.
 	//
 	// Experimental.
-	AccessToken *string `field:"optional" json:"accessToken" yaml:"accessToken"`
+	AccessToken awscdk.SecretValue `field:"optional" json:"accessToken" yaml:"accessToken"`
 	// The OAuth token and authorization endpoints.
 	// Experimental.
 	Endpoints *GoogleAnalytics4OAuthEndpoints `field:"optional" json:"endpoints" yaml:"endpoints"`

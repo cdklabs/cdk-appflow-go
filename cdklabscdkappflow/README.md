@@ -13,11 +13,12 @@ For more information, see the [Amazon AppFlow User Guide](https://docs.aws.amazo
 ```go
 import "github.com/aws/aws-cdk-go/awscdk"
 import "github.com/aws/aws-cdk-go/awscdk"
+import "github.com/aws/aws-cdk-go/awscdk"
 import "github.com/cdklabs/cdk-appflow-go/cdklabscdkappflow"
 
 var clientSecret iSecret
-var accessToken string
-var refreshToken string
+var accessToken secretValue
+var refreshToken secretValue
 var instanceUrl string
 
 
@@ -178,7 +179,7 @@ It is *recommended* to follow [data protection mechanisms for Amazon AppFlow](ht
 
 ## Confidential information
 
-Amazon AppFlow application integration is done using `ConnectionProfiles`. A `ConnectionProfile` requires providing sensitive information in the form of e.g. access and refresh tokens. It is *recommended* that such information is stored securely and passed to AWS CDK securely. All sensitive fields are effectively `IResolvable` and this means they can be resolved at deploy time. With that one should follow the [best practices for credentials with CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/security-best-practices.html#creds).
+Amazon AppFlow application integration is done using `ConnectionProfiles`. A `ConnectionProfile` requires providing sensitive information in the form of e.g. access and refresh tokens. It is *recommended* that such information is stored securely and passed to AWS CDK securely. All sensitive fields are effectively `IResolvable` and this means they can be resolved at deploy time. With that one should follow the [best practices for credentials with CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/security-best-practices.html#creds). In this library, the sensitive fields are typed as `SecretValue` to emphasize these should not be plain strings.
 
 An example of using a predefined AWS Secrets Manager secret for storing sensitive information can be found below:
 
@@ -195,9 +196,9 @@ profile := cdklabscdkappflow.NewGoogleAnalytics4ConnectorProfile(stack, jsii.Str
 	OAuth: &GoogleAnalytics4OAuthSettings{
 		Flow: &GoogleAnalytics4OAuthFlow{
 			RefreshTokenGrant: &GoogleAnalytics4RefreshTokenGrantFlow{
-				RefreshToken: secret.SecretValueFromJson(jsii.String("refreshToken")).ToString(),
-				ClientId: secret.*SecretValueFromJson(jsii.String("clientId")).*ToString(),
-				ClientSecret: secret.*SecretValueFromJson(jsii.String("clientSecret")).*ToString(),
+				RefreshToken: secret.SecretValueFromJson(jsii.String("refreshToken")),
+				ClientId: secret.*SecretValueFromJson(jsii.String("clientId")),
+				ClientSecret: secret.*SecretValueFromJson(jsii.String("clientSecret")),
 			},
 		},
 	},

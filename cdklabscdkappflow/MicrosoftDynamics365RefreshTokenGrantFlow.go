@@ -1,13 +1,16 @@
 package cdklabscdkappflow
 
+import (
+	"github.com/aws/aws-cdk-go/awscdk/v2"
+)
 
 // Experimental.
 type MicrosoftDynamics365RefreshTokenGrantFlow struct {
 	// Experimental.
-	ClientId *string `field:"optional" json:"clientId" yaml:"clientId"`
+	ClientId awscdk.SecretValue `field:"optional" json:"clientId" yaml:"clientId"`
 	// Experimental.
-	ClientSecret *string `field:"optional" json:"clientSecret" yaml:"clientSecret"`
+	ClientSecret awscdk.SecretValue `field:"optional" json:"clientSecret" yaml:"clientSecret"`
 	// Experimental.
-	RefreshToken *string `field:"optional" json:"refreshToken" yaml:"refreshToken"`
+	RefreshToken awscdk.SecretValue `field:"optional" json:"refreshToken" yaml:"refreshToken"`
 }
 

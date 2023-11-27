@@ -1,5 +1,8 @@
 package cdklabscdkappflow
 
+import (
+	"github.com/aws/aws-cdk-go/awscdk/v2"
+)
 
 // Experimental.
 type MicrosoftDynamics365OAuthSettings struct {
@@ -7,7 +10,7 @@ type MicrosoftDynamics365OAuthSettings struct {
 	//
 	// Note that if only the access token is provided AppFlow is not able to retrieve a fresh access token when the current one is expired.
 	// Experimental.
-	AccessToken *string `field:"optional" json:"accessToken" yaml:"accessToken"`
+	AccessToken awscdk.SecretValue `field:"optional" json:"accessToken" yaml:"accessToken"`
 	// Experimental.
 	Endpoints *MicrosoftDynamics365OAuthEndpointsSettings `field:"optional" json:"endpoints" yaml:"endpoints"`
 	// Experimental.

@@ -1,13 +1,16 @@
 package cdklabscdkappflow
 
+import (
+	"github.com/aws/aws-cdk-go/awscdk/v2"
+)
 
 // Experimental.
 type SlackOAuthSettings struct {
 	// Experimental.
-	AccessToken *string `field:"required" json:"accessToken" yaml:"accessToken"`
+	AccessToken awscdk.SecretValue `field:"required" json:"accessToken" yaml:"accessToken"`
 	// Experimental.
-	ClientId *string `field:"optional" json:"clientId" yaml:"clientId"`
+	ClientId awscdk.SecretValue `field:"optional" json:"clientId" yaml:"clientId"`
 	// Experimental.
-	ClientSecret *string `field:"optional" json:"clientSecret" yaml:"clientSecret"`
+	ClientSecret awscdk.SecretValue `field:"optional" json:"clientSecret" yaml:"clientSecret"`
 }
 

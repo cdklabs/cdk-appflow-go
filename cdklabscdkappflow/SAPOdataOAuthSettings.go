@@ -1,10 +1,13 @@
 package cdklabscdkappflow
 
+import (
+	"github.com/aws/aws-cdk-go/awscdk/v2"
+)
 
 // Experimental.
 type SAPOdataOAuthSettings struct {
 	// Experimental.
-	AccessToken *string `field:"optional" json:"accessToken" yaml:"accessToken"`
+	AccessToken awscdk.SecretValue `field:"optional" json:"accessToken" yaml:"accessToken"`
 	// Experimental.
 	Endpoints *SAPOdataOAuthEndpoints `field:"optional" json:"endpoints" yaml:"endpoints"`
 	// Experimental.
