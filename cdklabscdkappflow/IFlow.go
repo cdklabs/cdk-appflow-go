@@ -4,6 +4,7 @@ import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 
 	"github.com/aws/aws-cdk-go/awscdk/v2"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awscloudwatch"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsevents"
 	"github.com/cdklabs/cdk-appflow-go/cdklabscdkappflow/internal"
 )
@@ -11,6 +12,21 @@ import (
 // Experimental.
 type IFlow interface {
 	awscdk.IResource
+	// Creates a metric to report the number of records that Amazon AppFlow attempted to transfer for the flow run.
+	// Experimental.
+	MetricFlowExecutionRecordsProcessed(options *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Creates a metric to report the number of failed flow runs.
+	// Experimental.
+	MetricFlowExecutionsFailed(options *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Creates a metric to report the number of flow runs started.
+	// Experimental.
+	MetricFlowExecutionsStarted(options *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Creates a metric to report the number of successful flow runs.
+	// Experimental.
+	MetricFlowExecutionsSucceeded(options *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Creates a metric to report the  interval, in milliseconds, between the time the flow starts and the time it finishes.
+	// Experimental.
+	MetricFlowExecutionTime(options *awscloudwatch.MetricOptions) awscloudwatch.Metric
 	// Experimental.
 	OnRunCompleted(id *string, options *awsevents.OnEventOptions) awsevents.Rule
 	// Experimental.
@@ -29,6 +45,86 @@ type IFlow interface {
 // The jsii proxy for IFlow
 type jsiiProxy_IFlow struct {
 	internal.Type__awscdkIResource
+}
+
+func (i *jsiiProxy_IFlow) MetricFlowExecutionRecordsProcessed(options *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := i.validateMetricFlowExecutionRecordsProcessedParameters(options); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		i,
+		"metricFlowExecutionRecordsProcessed",
+		[]interface{}{options},
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IFlow) MetricFlowExecutionsFailed(options *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := i.validateMetricFlowExecutionsFailedParameters(options); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		i,
+		"metricFlowExecutionsFailed",
+		[]interface{}{options},
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IFlow) MetricFlowExecutionsStarted(options *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := i.validateMetricFlowExecutionsStartedParameters(options); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		i,
+		"metricFlowExecutionsStarted",
+		[]interface{}{options},
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IFlow) MetricFlowExecutionsSucceeded(options *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := i.validateMetricFlowExecutionsSucceededParameters(options); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		i,
+		"metricFlowExecutionsSucceeded",
+		[]interface{}{options},
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IFlow) MetricFlowExecutionTime(options *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := i.validateMetricFlowExecutionTimeParameters(options); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		i,
+		"metricFlowExecutionTime",
+		[]interface{}{options},
+		&returns,
+	)
+
+	return returns
 }
 
 func (i *jsiiProxy_IFlow) OnRunCompleted(id *string, options *awsevents.OnEventOptions) awsevents.Rule {

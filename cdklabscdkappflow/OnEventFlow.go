@@ -5,6 +5,7 @@ import (
 	_init_ "github.com/cdklabs/cdk-appflow-go/cdklabscdkappflow/jsii"
 
 	"github.com/aws/aws-cdk-go/awscdk/v2"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awscloudwatch"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsevents"
 	"github.com/aws/constructs-go/constructs/v10"
 )
@@ -75,6 +76,23 @@ type OnEventFlow interface {
 	// which will be a concrete name.
 	// Experimental.
 	GetResourceNameAttribute(nameAttr *string) *string
+	// Experimental.
+	Metric(metricName *string, options *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Creates a metric to report the number of records that Amazon AppFlow attempted to transfer for the flow run.
+	// Experimental.
+	MetricFlowExecutionRecordsProcessed(options *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Creates a metric to report the number of failed flow runs.
+	// Experimental.
+	MetricFlowExecutionsFailed(options *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Creates a metric to report the number of flow runs started.
+	// Experimental.
+	MetricFlowExecutionsStarted(options *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Creates a metric to report the number of successful flow runs.
+	// Experimental.
+	MetricFlowExecutionsSucceeded(options *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Creates a metric to report the  interval, in milliseconds, between the time the flow starts and the time it finishes.
+	// Experimental.
+	MetricFlowExecutionTime(options *awscloudwatch.MetricOptions) awscloudwatch.Metric
 	// Experimental.
 	OnDeactivated(id *string, options *awsevents.OnEventOptions) awsevents.Rule
 	// Experimental.
@@ -324,6 +342,102 @@ func (o *jsiiProxy_OnEventFlow) GetResourceNameAttribute(nameAttr *string) *stri
 		o,
 		"getResourceNameAttribute",
 		[]interface{}{nameAttr},
+		&returns,
+	)
+
+	return returns
+}
+
+func (o *jsiiProxy_OnEventFlow) Metric(metricName *string, options *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := o.validateMetricParameters(metricName, options); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		o,
+		"metric",
+		[]interface{}{metricName, options},
+		&returns,
+	)
+
+	return returns
+}
+
+func (o *jsiiProxy_OnEventFlow) MetricFlowExecutionRecordsProcessed(options *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := o.validateMetricFlowExecutionRecordsProcessedParameters(options); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		o,
+		"metricFlowExecutionRecordsProcessed",
+		[]interface{}{options},
+		&returns,
+	)
+
+	return returns
+}
+
+func (o *jsiiProxy_OnEventFlow) MetricFlowExecutionsFailed(options *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := o.validateMetricFlowExecutionsFailedParameters(options); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		o,
+		"metricFlowExecutionsFailed",
+		[]interface{}{options},
+		&returns,
+	)
+
+	return returns
+}
+
+func (o *jsiiProxy_OnEventFlow) MetricFlowExecutionsStarted(options *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := o.validateMetricFlowExecutionsStartedParameters(options); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		o,
+		"metricFlowExecutionsStarted",
+		[]interface{}{options},
+		&returns,
+	)
+
+	return returns
+}
+
+func (o *jsiiProxy_OnEventFlow) MetricFlowExecutionsSucceeded(options *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := o.validateMetricFlowExecutionsSucceededParameters(options); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		o,
+		"metricFlowExecutionsSucceeded",
+		[]interface{}{options},
+		&returns,
+	)
+
+	return returns
+}
+
+func (o *jsiiProxy_OnEventFlow) MetricFlowExecutionTime(options *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := o.validateMetricFlowExecutionTimeParameters(options); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		o,
+		"metricFlowExecutionTime",
+		[]interface{}{options},
 		&returns,
 	)
 

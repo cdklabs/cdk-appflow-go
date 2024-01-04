@@ -8,6 +8,7 @@ import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 
 	"github.com/aws/aws-cdk-go/awscdk/v2"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awscloudwatch"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsevents"
 	"github.com/aws/constructs-go/constructs/v10"
 )
@@ -38,6 +39,58 @@ func (o *jsiiProxy_OnEventFlow) validateGetResourceArnAttributeParameters(arnAtt
 func (o *jsiiProxy_OnEventFlow) validateGetResourceNameAttributeParameters(nameAttr *string) error {
 	if nameAttr == nil {
 		return fmt.Errorf("parameter nameAttr is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (o *jsiiProxy_OnEventFlow) validateMetricParameters(metricName *string, options *awscloudwatch.MetricOptions) error {
+	if metricName == nil {
+		return fmt.Errorf("parameter metricName is required, but nil was provided")
+	}
+
+	if err := _jsii_.ValidateStruct(options, func() string { return "parameter options" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (o *jsiiProxy_OnEventFlow) validateMetricFlowExecutionRecordsProcessedParameters(options *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(options, func() string { return "parameter options" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (o *jsiiProxy_OnEventFlow) validateMetricFlowExecutionsFailedParameters(options *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(options, func() string { return "parameter options" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (o *jsiiProxy_OnEventFlow) validateMetricFlowExecutionsStartedParameters(options *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(options, func() string { return "parameter options" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (o *jsiiProxy_OnEventFlow) validateMetricFlowExecutionsSucceededParameters(options *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(options, func() string { return "parameter options" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (o *jsiiProxy_OnEventFlow) validateMetricFlowExecutionTimeParameters(options *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(options, func() string { return "parameter options" }); err != nil {
+		return err
 	}
 
 	return nil

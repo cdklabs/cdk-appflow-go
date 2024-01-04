@@ -138,7 +138,38 @@ flow := cdklabscdkappflow.NewOnDemandFlow(stack, jsii.String("OnDemandFlow"), &O
 })
 ```
 
-## EventBridge notifications
+## Monitoring
+
+### Metrcis
+
+Each flow allows to access metrics through the methods:
+
+* `metricFlowExecutionsStarted`
+* `metricFlowExecutionsFailed`
+* `metricFlowExecutionsSucceeded`
+* `metricFlowExecutionTime`
+* `metricFlowExecutionRecordsProcessed`
+
+For detailed information about AppFlow metrics refer to [the documentation](https://docs.aws.amazon.com/appflow/latest/userguide/monitoring-cloudwatch.html).
+
+It can be consume by CloudWatch alert using as in the example below:
+
+```go
+import "github.com/cdklabs/cdk-appflow-go/cdklabscdkappflow"
+
+var flow iFlow
+var stack stack
+
+
+metric := flow.MetricFlowExecutionsStarted()
+
+metric.CreateAlarm(stack, jsii.String("FlowExecutionsStartedAlarm"), &CreateAlarmOptions{
+	Threshold: jsii.Number(1000),
+	EvaluationPeriods: jsii.Number(2),
+})
+```
+
+### EventBridge notifications
 
 Each flow publishes events to the default EventBridge bus:
 

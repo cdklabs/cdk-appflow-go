@@ -8,6 +8,7 @@ import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 
 	"github.com/aws/aws-cdk-go/awscdk/v2"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awscloudwatch"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsevents"
 	"github.com/aws/constructs-go/constructs/v10"
 )
@@ -38,6 +39,58 @@ func (t *jsiiProxy_TriggeredFlowBase) validateGetResourceArnAttributeParameters(
 func (t *jsiiProxy_TriggeredFlowBase) validateGetResourceNameAttributeParameters(nameAttr *string) error {
 	if nameAttr == nil {
 		return fmt.Errorf("parameter nameAttr is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (t *jsiiProxy_TriggeredFlowBase) validateMetricParameters(metricName *string, options *awscloudwatch.MetricOptions) error {
+	if metricName == nil {
+		return fmt.Errorf("parameter metricName is required, but nil was provided")
+	}
+
+	if err := _jsii_.ValidateStruct(options, func() string { return "parameter options" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (t *jsiiProxy_TriggeredFlowBase) validateMetricFlowExecutionRecordsProcessedParameters(options *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(options, func() string { return "parameter options" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (t *jsiiProxy_TriggeredFlowBase) validateMetricFlowExecutionsFailedParameters(options *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(options, func() string { return "parameter options" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (t *jsiiProxy_TriggeredFlowBase) validateMetricFlowExecutionsStartedParameters(options *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(options, func() string { return "parameter options" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (t *jsiiProxy_TriggeredFlowBase) validateMetricFlowExecutionsSucceededParameters(options *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(options, func() string { return "parameter options" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (t *jsiiProxy_TriggeredFlowBase) validateMetricFlowExecutionTimeParameters(options *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(options, func() string { return "parameter options" }); err != nil {
+		return err
 	}
 
 	return nil

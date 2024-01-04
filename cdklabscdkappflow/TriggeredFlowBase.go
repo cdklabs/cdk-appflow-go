@@ -5,6 +5,7 @@ import (
 	_init_ "github.com/cdklabs/cdk-appflow-go/cdklabscdkappflow/jsii"
 
 	"github.com/aws/aws-cdk-go/awscdk/v2"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awscloudwatch"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsevents"
 	"github.com/aws/constructs-go/constructs/v10"
 )
@@ -76,6 +77,23 @@ type TriggeredFlowBase interface {
 	// which will be a concrete name.
 	// Experimental.
 	GetResourceNameAttribute(nameAttr *string) *string
+	// Experimental.
+	Metric(metricName *string, options *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Creates a metric to report the number of records that Amazon AppFlow attempted to transfer for the flow run.
+	// Experimental.
+	MetricFlowExecutionRecordsProcessed(options *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Creates a metric to report the number of failed flow runs.
+	// Experimental.
+	MetricFlowExecutionsFailed(options *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Creates a metric to report the number of flow runs started.
+	// Experimental.
+	MetricFlowExecutionsStarted(options *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Creates a metric to report the number of successful flow runs.
+	// Experimental.
+	MetricFlowExecutionsSucceeded(options *awscloudwatch.MetricOptions) awscloudwatch.Metric
+	// Creates a metric to report the  interval, in milliseconds, between the time the flow starts and the time it finishes.
+	// Experimental.
+	MetricFlowExecutionTime(options *awscloudwatch.MetricOptions) awscloudwatch.Metric
 	// Experimental.
 	OnDeactivated(id *string, options *awsevents.OnEventOptions) awsevents.Rule
 	// Experimental.
@@ -305,6 +323,102 @@ func (t *jsiiProxy_TriggeredFlowBase) GetResourceNameAttribute(nameAttr *string)
 		t,
 		"getResourceNameAttribute",
 		[]interface{}{nameAttr},
+		&returns,
+	)
+
+	return returns
+}
+
+func (t *jsiiProxy_TriggeredFlowBase) Metric(metricName *string, options *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := t.validateMetricParameters(metricName, options); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		t,
+		"metric",
+		[]interface{}{metricName, options},
+		&returns,
+	)
+
+	return returns
+}
+
+func (t *jsiiProxy_TriggeredFlowBase) MetricFlowExecutionRecordsProcessed(options *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := t.validateMetricFlowExecutionRecordsProcessedParameters(options); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		t,
+		"metricFlowExecutionRecordsProcessed",
+		[]interface{}{options},
+		&returns,
+	)
+
+	return returns
+}
+
+func (t *jsiiProxy_TriggeredFlowBase) MetricFlowExecutionsFailed(options *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := t.validateMetricFlowExecutionsFailedParameters(options); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		t,
+		"metricFlowExecutionsFailed",
+		[]interface{}{options},
+		&returns,
+	)
+
+	return returns
+}
+
+func (t *jsiiProxy_TriggeredFlowBase) MetricFlowExecutionsStarted(options *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := t.validateMetricFlowExecutionsStartedParameters(options); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		t,
+		"metricFlowExecutionsStarted",
+		[]interface{}{options},
+		&returns,
+	)
+
+	return returns
+}
+
+func (t *jsiiProxy_TriggeredFlowBase) MetricFlowExecutionsSucceeded(options *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := t.validateMetricFlowExecutionsSucceededParameters(options); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		t,
+		"metricFlowExecutionsSucceeded",
+		[]interface{}{options},
+		&returns,
+	)
+
+	return returns
+}
+
+func (t *jsiiProxy_TriggeredFlowBase) MetricFlowExecutionTime(options *awscloudwatch.MetricOptions) awscloudwatch.Metric {
+	if err := t.validateMetricFlowExecutionTimeParameters(options); err != nil {
+		panic(err)
+	}
+	var returns awscloudwatch.Metric
+
+	_jsii_.Invoke(
+		t,
+		"metricFlowExecutionTime",
+		[]interface{}{options},
 		&returns,
 	)
 

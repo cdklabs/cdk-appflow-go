@@ -16,6 +16,30 @@ func (o *jsiiProxy_OnEventFlow) validateGetResourceNameAttributeParameters(nameA
 	return nil
 }
 
+func (o *jsiiProxy_OnEventFlow) validateMetricParameters(metricName *string, options *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func (o *jsiiProxy_OnEventFlow) validateMetricFlowExecutionRecordsProcessedParameters(options *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func (o *jsiiProxy_OnEventFlow) validateMetricFlowExecutionsFailedParameters(options *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func (o *jsiiProxy_OnEventFlow) validateMetricFlowExecutionsStartedParameters(options *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func (o *jsiiProxy_OnEventFlow) validateMetricFlowExecutionsSucceededParameters(options *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
+func (o *jsiiProxy_OnEventFlow) validateMetricFlowExecutionTimeParameters(options *awscloudwatch.MetricOptions) error {
+	return nil
+}
+
 func (o *jsiiProxy_OnEventFlow) validateOnDeactivatedParameters(id *string, options *awsevents.OnEventOptions) error {
 	return nil
 }

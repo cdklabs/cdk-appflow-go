@@ -7,8 +7,49 @@ import (
 
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 
+	"github.com/aws/aws-cdk-go/awscdk/v2/awscloudwatch"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsevents"
 )
+
+func (i *jsiiProxy_IFlow) validateMetricFlowExecutionRecordsProcessedParameters(options *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(options, func() string { return "parameter options" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_IFlow) validateMetricFlowExecutionsFailedParameters(options *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(options, func() string { return "parameter options" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_IFlow) validateMetricFlowExecutionsStartedParameters(options *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(options, func() string { return "parameter options" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_IFlow) validateMetricFlowExecutionsSucceededParameters(options *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(options, func() string { return "parameter options" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_IFlow) validateMetricFlowExecutionTimeParameters(options *awscloudwatch.MetricOptions) error {
+	if err := _jsii_.ValidateStruct(options, func() string { return "parameter options" }); err != nil {
+		return err
+	}
+
+	return nil
+}
 
 func (i *jsiiProxy_IFlow) validateOnRunCompletedParameters(id *string, options *awsevents.OnEventOptions) error {
 	if id == nil {
