@@ -8,6 +8,61 @@ import (
 )
 
 func init() {
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.AmazonRdsForPostgreSqlBasicAuthSettings",
+		reflect.TypeOf((*AmazonRdsForPostgreSqlBasicAuthSettings)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.AmazonRdsForPostgreSqlConnectorProfile",
+		reflect.TypeOf((*AmazonRdsForPostgreSqlConnectorProfile)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "arn", GoGetter: "Arn"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileCredentials", GoMethod: "BuildConnectorProfileCredentials"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileProperties", GoMethod: "BuildConnectorProfileProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "credentials", GoGetter: "Credentials"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "tryAddNodeDependency", GoMethod: "TryAddNodeDependency"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AmazonRdsForPostgreSqlConnectorProfile{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ConnectorProfileBase)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.AmazonRdsForPostgreSqlConnectorProfileProps",
+		reflect.TypeOf((*AmazonRdsForPostgreSqlConnectorProfileProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.AmazonRdsForPostgreSqlDestination",
+		reflect.TypeOf((*AmazonRdsForPostgreSqlDestination)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "bind", GoMethod: "Bind"},
+			_jsii_.MemberProperty{JsiiProperty: "connectorType", GoGetter: "ConnectorType"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AmazonRdsForPostgreSqlDestination{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IDestination)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.AmazonRdsForPostgreSqlDestinationProps",
+		reflect.TypeOf((*AmazonRdsForPostgreSqlDestinationProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.AmazonRdsForPostgreSqlObject",
+		reflect.TypeOf((*AmazonRdsForPostgreSqlObject)(nil)).Elem(),
+	)
 	_jsii_.RegisterEnum(
 		"@cdklabs/cdk-appflow.ConnectionMode",
 		reflect.TypeOf((*ConnectionMode)(nil)).Elem(),
@@ -405,6 +460,69 @@ func init() {
 		func() interface{} {
 			return &jsiiProxy_IVertex{}
 		},
+	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/cdk-appflow.JdbcDriver",
+		reflect.TypeOf((*JdbcDriver)(nil)).Elem(),
+		map[string]interface{}{
+			"POSTGRES": JdbcDriver_POSTGRES,
+			"MYSQL": JdbcDriver_MYSQL,
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.JdbcSmallDataScaleBasicAuthSettings",
+		reflect.TypeOf((*JdbcSmallDataScaleBasicAuthSettings)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.JdbcSmallDataScaleConnectorProfile",
+		reflect.TypeOf((*JdbcSmallDataScaleConnectorProfile)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "arn", GoGetter: "Arn"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileCredentials", GoMethod: "BuildConnectorProfileCredentials"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileProperties", GoMethod: "BuildConnectorProfileProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "credentials", GoGetter: "Credentials"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "tryAddNodeDependency", GoMethod: "TryAddNodeDependency"},
+		},
+		func() interface{} {
+			j := jsiiProxy_JdbcSmallDataScaleConnectorProfile{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ConnectorProfileBase)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.JdbcSmallDataScaleConnectorProfileProps",
+		reflect.TypeOf((*JdbcSmallDataScaleConnectorProfileProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.JdbcSmallDataScaleObject",
+		reflect.TypeOf((*JdbcSmallDataScaleObject)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.JdbcSmallDataScaleSource",
+		reflect.TypeOf((*JdbcSmallDataScaleSource)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "bind", GoMethod: "Bind"},
+			_jsii_.MemberProperty{JsiiProperty: "connectorType", GoGetter: "ConnectorType"},
+		},
+		func() interface{} {
+			j := jsiiProxy_JdbcSmallDataScaleSource{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ISource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.JdbcSmallDataScaleSourceProps",
+		reflect.TypeOf((*JdbcSmallDataScaleSourceProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/cdk-appflow.MapAllConfig",
