@@ -20,9 +20,9 @@ type Task interface {
 	// Experimental.
 	SetDestinationField(val *string)
 	// Experimental.
-	Properties() *TaskProperties
+	Properties() *[]*TaskProperty
 	// Experimental.
-	SetProperties(val *TaskProperties)
+	SetProperties(val *[]*TaskProperty)
 	// Experimental.
 	SourceFields() *[]*string
 	// Experimental.
@@ -60,8 +60,8 @@ func (j *jsiiProxy_Task) DestinationField() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Task) Properties() *TaskProperties {
-	var returns *TaskProperties
+func (j *jsiiProxy_Task) Properties() *[]*TaskProperty {
+	var returns *[]*TaskProperty
 	_jsii_.Get(
 		j,
 		"properties",
@@ -92,7 +92,7 @@ func (j *jsiiProxy_Task) Type() *string {
 
 
 // Experimental.
-func NewTask(type_ *string, sourceFields *[]*string, connectorOperator *TaskConnectorOperator, properties *TaskProperties, destinationField *string) Task {
+func NewTask(type_ *string, sourceFields *[]*string, connectorOperator *TaskConnectorOperator, properties *[]*TaskProperty, destinationField *string) Task {
 	_init_.Initialize()
 
 	if err := validateNewTaskParameters(type_, sourceFields, connectorOperator, properties); err != nil {
@@ -110,7 +110,7 @@ func NewTask(type_ *string, sourceFields *[]*string, connectorOperator *TaskConn
 }
 
 // Experimental.
-func NewTask_Override(t Task, type_ *string, sourceFields *[]*string, connectorOperator *TaskConnectorOperator, properties *TaskProperties, destinationField *string) {
+func NewTask_Override(t Task, type_ *string, sourceFields *[]*string, connectorOperator *TaskConnectorOperator, properties *[]*TaskProperty, destinationField *string) {
 	_init_.Initialize()
 
 	_jsii_.Create(
@@ -139,7 +139,7 @@ func (j *jsiiProxy_Task)SetDestinationField(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Task)SetProperties(val *TaskProperties) {
+func (j *jsiiProxy_Task)SetProperties(val *[]*TaskProperty) {
 	if err := j.validateSetPropertiesParameters(val); err != nil {
 		panic(err)
 	}

@@ -519,7 +519,7 @@ func validateFilterCondition_TimestampNotEqualsParameters(field *Field, val inte
 	return nil
 }
 
-func validateNewFilterConditionParameters(field *Field, filter *string, properties *TaskProperties) error {
+func validateNewFilterConditionParameters(field *Field, filter *string, properties *[]*TaskProperty) error {
 	if field == nil {
 		return fmt.Errorf("parameter field is required, but nil was provided")
 	}
@@ -534,8 +534,10 @@ func validateNewFilterConditionParameters(field *Field, filter *string, properti
 	if properties == nil {
 		return fmt.Errorf("parameter properties is required, but nil was provided")
 	}
-	if err := _jsii_.ValidateStruct(properties, func() string { return "parameter properties" }); err != nil {
-		return err
+	for idx_96adb9, v := range *properties {
+		if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter properties[%#v]", idx_96adb9) }); err != nil {
+			return err
+		}
 	}
 
 	return nil

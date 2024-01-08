@@ -15,7 +15,7 @@ type FilterCondition interface {
 	// Experimental.
 	Filter() *string
 	// Experimental.
-	Properties() *TaskProperties
+	Properties() *[]*TaskProperty
 }
 
 // The jsii proxy struct for FilterCondition
@@ -43,8 +43,8 @@ func (j *jsiiProxy_FilterCondition) Filter() *string {
 	return returns
 }
 
-func (j *jsiiProxy_FilterCondition) Properties() *TaskProperties {
-	var returns *TaskProperties
+func (j *jsiiProxy_FilterCondition) Properties() *[]*TaskProperty {
+	var returns *[]*TaskProperty
 	_jsii_.Get(
 		j,
 		"properties",
@@ -55,7 +55,7 @@ func (j *jsiiProxy_FilterCondition) Properties() *TaskProperties {
 
 
 // Experimental.
-func NewFilterCondition(field *Field, filter *string, properties *TaskProperties) FilterCondition {
+func NewFilterCondition(field *Field, filter *string, properties *[]*TaskProperty) FilterCondition {
 	_init_.Initialize()
 
 	if err := validateNewFilterConditionParameters(field, filter, properties); err != nil {
@@ -73,7 +73,7 @@ func NewFilterCondition(field *Field, filter *string, properties *TaskProperties
 }
 
 // Experimental.
-func NewFilterCondition_Override(f FilterCondition, field *Field, filter *string, properties *TaskProperties) {
+func NewFilterCondition_Override(f FilterCondition, field *Field, filter *string, properties *[]*TaskProperty) {
 	_init_.Initialize()
 
 	_jsii_.Create(

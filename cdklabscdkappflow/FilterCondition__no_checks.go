@@ -76,7 +76,7 @@ func validateFilterCondition_TimestampNotEqualsParameters(field *Field, val inte
 	return nil
 }
 
-func validateNewFilterConditionParameters(field *Field, filter *string, properties *TaskProperties) error {
+func validateNewFilterConditionParameters(field *Field, filter *string, properties *[]*TaskProperty) error {
 	return nil
 }
 

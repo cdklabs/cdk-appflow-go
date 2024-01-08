@@ -1534,8 +1534,8 @@ func init() {
 		reflect.TypeOf((*TaskConnectorOperator)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
-		"@cdklabs/cdk-appflow.TaskProperties",
-		reflect.TypeOf((*TaskProperties)(nil)).Elem(),
+		"@cdklabs/cdk-appflow.TaskProperty",
+		reflect.TypeOf((*TaskProperty)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
 		"@cdklabs/cdk-appflow.Transform",

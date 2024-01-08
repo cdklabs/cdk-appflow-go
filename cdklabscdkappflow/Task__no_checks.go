@@ -12,7 +12,7 @@ func (j *jsiiProxy_Task) validateSetConnectorOperatorParameters(val *TaskConnect
 	return nil
 }
 
-func (j *jsiiProxy_Task) validateSetPropertiesParameters(val *TaskProperties) error {
+func (j *jsiiProxy_Task) validateSetPropertiesParameters(val *[]*TaskProperty) error {
 	return nil
 }
 
@@ -24,7 +24,7 @@ func (j *jsiiProxy_Task) validateSetTypeParameters(val *string) error {
 	return nil
 }
 
-func validateNewTaskParameters(type_ *string, sourceFields *[]*string, connectorOperator *TaskConnectorOperator, properties *TaskProperties) error {
+func validateNewTaskParameters(type_ *string, sourceFields *[]*string, connectorOperator *TaskConnectorOperator, properties *[]*TaskProperty) error {
 	return nil
 }
 

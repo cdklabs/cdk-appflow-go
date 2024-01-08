@@ -31,12 +31,14 @@ func (j *jsiiProxy_Task) validateSetConnectorOperatorParameters(val *TaskConnect
 	return nil
 }
 
-func (j *jsiiProxy_Task) validateSetPropertiesParameters(val *TaskProperties) error {
+func (j *jsiiProxy_Task) validateSetPropertiesParameters(val *[]*TaskProperty) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+	for idx_97dfc6, v := range *val {
+		if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter val[%#v]", idx_97dfc6) }); err != nil {
+			return err
+		}
 	}
 
 	return nil
@@ -58,7 +60,7 @@ func (j *jsiiProxy_Task) validateSetTypeParameters(val *string) error {
 	return nil
 }
 
-func validateNewTaskParameters(type_ *string, sourceFields *[]*string, connectorOperator *TaskConnectorOperator, properties *TaskProperties) error {
+func validateNewTaskParameters(type_ *string, sourceFields *[]*string, connectorOperator *TaskConnectorOperator, properties *[]*TaskProperty) error {
 	if type_ == nil {
 		return fmt.Errorf("parameter type_ is required, but nil was provided")
 	}
@@ -77,8 +79,10 @@ func validateNewTaskParameters(type_ *string, sourceFields *[]*string, connector
 	if properties == nil {
 		return fmt.Errorf("parameter properties is required, but nil was provided")
 	}
-	if err := _jsii_.ValidateStruct(properties, func() string { return "parameter properties" }); err != nil {
-		return err
+	for idx_96adb9, v := range *properties {
+		if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter properties[%#v]", idx_96adb9) }); err != nil {
+			return err
+		}
 	}
 
 	return nil
