@@ -325,6 +325,80 @@ func init() {
 		"@cdklabs/cdk-appflow.GoogleAnalytics4SourceProps",
 		reflect.TypeOf((*GoogleAnalytics4SourceProps)(nil)).Elem(),
 	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/cdk-appflow.GoogleBigQueryApiVersion",
+		reflect.TypeOf((*GoogleBigQueryApiVersion)(nil)).Elem(),
+		map[string]interface{}{
+			"V2": GoogleBigQueryApiVersion_V2,
+		},
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.GoogleBigQueryConnectorProfile",
+		reflect.TypeOf((*GoogleBigQueryConnectorProfile)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "arn", GoGetter: "Arn"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileCredentials", GoMethod: "BuildConnectorProfileCredentials"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileProperties", GoMethod: "BuildConnectorProfileProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "credentials", GoGetter: "Credentials"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "tryAddNodeDependency", GoMethod: "TryAddNodeDependency"},
+		},
+		func() interface{} {
+			j := jsiiProxy_GoogleBigQueryConnectorProfile{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ConnectorProfileBase)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.GoogleBigQueryConnectorProfileProps",
+		reflect.TypeOf((*GoogleBigQueryConnectorProfileProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.GoogleBigQueryOAuthEndpoints",
+		reflect.TypeOf((*GoogleBigQueryOAuthEndpoints)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.GoogleBigQueryOAuthFlow",
+		reflect.TypeOf((*GoogleBigQueryOAuthFlow)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.GoogleBigQueryOAuthSettings",
+		reflect.TypeOf((*GoogleBigQueryOAuthSettings)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.GoogleBigQueryObject",
+		reflect.TypeOf((*GoogleBigQueryObject)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.GoogleBigQueryRefreshTokenGrantFlow",
+		reflect.TypeOf((*GoogleBigQueryRefreshTokenGrantFlow)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.GoogleBigQuerySource",
+		reflect.TypeOf((*GoogleBigQuerySource)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "bind", GoMethod: "Bind"},
+			_jsii_.MemberProperty{JsiiProperty: "connectorType", GoGetter: "ConnectorType"},
+		},
+		func() interface{} {
+			j := jsiiProxy_GoogleBigQuerySource{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ISource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.GoogleBigQuerySourceProps",
+		reflect.TypeOf((*GoogleBigQuerySourceProps)(nil)).Elem(),
+	)
 	_jsii_.RegisterInterface(
 		"@cdklabs/cdk-appflow.IConnectorProfile",
 		reflect.TypeOf((*IConnectorProfile)(nil)).Elem(),

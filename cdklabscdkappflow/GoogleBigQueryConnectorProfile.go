@@ -6,13 +6,12 @@ import (
 
 	"github.com/aws/aws-cdk-go/awscdk/v2"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsappflow"
-	"github.com/aws/aws-cdk-go/awscdk/v2/awsiam"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awssecretsmanager"
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
 // Experimental.
-type SnowflakeConnectorProfile interface {
+type GoogleBigQueryConnectorProfile interface {
 	ConnectorProfileBase
 	// Experimental.
 	Arn() *string
@@ -28,13 +27,6 @@ type SnowflakeConnectorProfile interface {
 	// that might be different than the stack they were imported into.
 	// Experimental.
 	Env() *awscdk.ResourceEnvironment
-	// The AWS IAM Role for the storage integration with Snowflake.
-	//
-	// Available only if [SnowflakeConnectorProfileProps's integration property]{@link SnowflakeConnectorProfileProps#integration } is provided.
-	//
-	// For more details see {@link https://docs.snowflake.com/en/user-guide/data-load-s3-config-storage-integration}
-	// Experimental.
-	IntegrationRole() awsiam.IRole
 	// Experimental.
 	Name() *string
 	// The tree node.
@@ -91,12 +83,12 @@ type SnowflakeConnectorProfile interface {
 	TryAddNodeDependency(scope constructs.IConstruct, resource interface{})
 }
 
-// The jsii proxy struct for SnowflakeConnectorProfile
-type jsiiProxy_SnowflakeConnectorProfile struct {
+// The jsii proxy struct for GoogleBigQueryConnectorProfile
+type jsiiProxy_GoogleBigQueryConnectorProfile struct {
 	jsiiProxy_ConnectorProfileBase
 }
 
-func (j *jsiiProxy_SnowflakeConnectorProfile) Arn() *string {
+func (j *jsiiProxy_GoogleBigQueryConnectorProfile) Arn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -106,7 +98,7 @@ func (j *jsiiProxy_SnowflakeConnectorProfile) Arn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_SnowflakeConnectorProfile) Credentials() awssecretsmanager.ISecret {
+func (j *jsiiProxy_GoogleBigQueryConnectorProfile) Credentials() awssecretsmanager.ISecret {
 	var returns awssecretsmanager.ISecret
 	_jsii_.Get(
 		j,
@@ -116,7 +108,7 @@ func (j *jsiiProxy_SnowflakeConnectorProfile) Credentials() awssecretsmanager.IS
 	return returns
 }
 
-func (j *jsiiProxy_SnowflakeConnectorProfile) Env() *awscdk.ResourceEnvironment {
+func (j *jsiiProxy_GoogleBigQueryConnectorProfile) Env() *awscdk.ResourceEnvironment {
 	var returns *awscdk.ResourceEnvironment
 	_jsii_.Get(
 		j,
@@ -126,17 +118,7 @@ func (j *jsiiProxy_SnowflakeConnectorProfile) Env() *awscdk.ResourceEnvironment 
 	return returns
 }
 
-func (j *jsiiProxy_SnowflakeConnectorProfile) IntegrationRole() awsiam.IRole {
-	var returns awsiam.IRole
-	_jsii_.Get(
-		j,
-		"integrationRole",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_SnowflakeConnectorProfile) Name() *string {
+func (j *jsiiProxy_GoogleBigQueryConnectorProfile) Name() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -146,7 +128,7 @@ func (j *jsiiProxy_SnowflakeConnectorProfile) Name() *string {
 	return returns
 }
 
-func (j *jsiiProxy_SnowflakeConnectorProfile) Node() constructs.Node {
+func (j *jsiiProxy_GoogleBigQueryConnectorProfile) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
 		j,
@@ -156,7 +138,7 @@ func (j *jsiiProxy_SnowflakeConnectorProfile) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_SnowflakeConnectorProfile) PhysicalName() *string {
+func (j *jsiiProxy_GoogleBigQueryConnectorProfile) PhysicalName() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -166,7 +148,7 @@ func (j *jsiiProxy_SnowflakeConnectorProfile) PhysicalName() *string {
 	return returns
 }
 
-func (j *jsiiProxy_SnowflakeConnectorProfile) Stack() awscdk.Stack {
+func (j *jsiiProxy_GoogleBigQueryConnectorProfile) Stack() awscdk.Stack {
 	var returns awscdk.Stack
 	_jsii_.Get(
 		j,
@@ -178,16 +160,16 @@ func (j *jsiiProxy_SnowflakeConnectorProfile) Stack() awscdk.Stack {
 
 
 // Experimental.
-func NewSnowflakeConnectorProfile(scope constructs.Construct, id *string, props *SnowflakeConnectorProfileProps) SnowflakeConnectorProfile {
+func NewGoogleBigQueryConnectorProfile(scope constructs.Construct, id *string, props *GoogleBigQueryConnectorProfileProps) GoogleBigQueryConnectorProfile {
 	_init_.Initialize()
 
-	if err := validateNewSnowflakeConnectorProfileParameters(scope, id, props); err != nil {
+	if err := validateNewGoogleBigQueryConnectorProfileParameters(scope, id, props); err != nil {
 		panic(err)
 	}
-	j := jsiiProxy_SnowflakeConnectorProfile{}
+	j := jsiiProxy_GoogleBigQueryConnectorProfile{}
 
 	_jsii_.Create(
-		"@cdklabs/cdk-appflow.SnowflakeConnectorProfile",
+		"@cdklabs/cdk-appflow.GoogleBigQueryConnectorProfile",
 		[]interface{}{scope, id, props},
 		&j,
 	)
@@ -196,27 +178,27 @@ func NewSnowflakeConnectorProfile(scope constructs.Construct, id *string, props 
 }
 
 // Experimental.
-func NewSnowflakeConnectorProfile_Override(s SnowflakeConnectorProfile, scope constructs.Construct, id *string, props *SnowflakeConnectorProfileProps) {
+func NewGoogleBigQueryConnectorProfile_Override(g GoogleBigQueryConnectorProfile, scope constructs.Construct, id *string, props *GoogleBigQueryConnectorProfileProps) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdklabs/cdk-appflow.SnowflakeConnectorProfile",
+		"@cdklabs/cdk-appflow.GoogleBigQueryConnectorProfile",
 		[]interface{}{scope, id, props},
-		s,
+		g,
 	)
 }
 
 // Experimental.
-func SnowflakeConnectorProfile_FromConnectionProfileArn(scope constructs.Construct, id *string, arn *string) SnowflakeConnectorProfile {
+func GoogleBigQueryConnectorProfile_FromConnectionProfileArn(scope constructs.Construct, id *string, arn *string) GoogleBigQueryConnectorProfile {
 	_init_.Initialize()
 
-	if err := validateSnowflakeConnectorProfile_FromConnectionProfileArnParameters(scope, id, arn); err != nil {
+	if err := validateGoogleBigQueryConnectorProfile_FromConnectionProfileArnParameters(scope, id, arn); err != nil {
 		panic(err)
 	}
-	var returns SnowflakeConnectorProfile
+	var returns GoogleBigQueryConnectorProfile
 
 	_jsii_.StaticInvoke(
-		"@cdklabs/cdk-appflow.SnowflakeConnectorProfile",
+		"@cdklabs/cdk-appflow.GoogleBigQueryConnectorProfile",
 		"fromConnectionProfileArn",
 		[]interface{}{scope, id, arn},
 		&returns,
@@ -226,16 +208,16 @@ func SnowflakeConnectorProfile_FromConnectionProfileArn(scope constructs.Constru
 }
 
 // Experimental.
-func SnowflakeConnectorProfile_FromConnectionProfileName(scope constructs.Construct, id *string, name *string) SnowflakeConnectorProfile {
+func GoogleBigQueryConnectorProfile_FromConnectionProfileName(scope constructs.Construct, id *string, name *string) GoogleBigQueryConnectorProfile {
 	_init_.Initialize()
 
-	if err := validateSnowflakeConnectorProfile_FromConnectionProfileNameParameters(scope, id, name); err != nil {
+	if err := validateGoogleBigQueryConnectorProfile_FromConnectionProfileNameParameters(scope, id, name); err != nil {
 		panic(err)
 	}
-	var returns SnowflakeConnectorProfile
+	var returns GoogleBigQueryConnectorProfile
 
 	_jsii_.StaticInvoke(
-		"@cdklabs/cdk-appflow.SnowflakeConnectorProfile",
+		"@cdklabs/cdk-appflow.GoogleBigQueryConnectorProfile",
 		"fromConnectionProfileName",
 		[]interface{}{scope, id, name},
 		&returns,
@@ -248,16 +230,16 @@ func SnowflakeConnectorProfile_FromConnectionProfileName(scope constructs.Constr
 //
 // Returns: true if `x` is an object created from a class which extends `Construct`.
 // Deprecated: use `x instanceof Construct` instead.
-func SnowflakeConnectorProfile_IsConstruct(x interface{}) *bool {
+func GoogleBigQueryConnectorProfile_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateSnowflakeConnectorProfile_IsConstructParameters(x); err != nil {
+	if err := validateGoogleBigQueryConnectorProfile_IsConstructParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdklabs/cdk-appflow.SnowflakeConnectorProfile",
+		"@cdklabs/cdk-appflow.GoogleBigQueryConnectorProfile",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -268,16 +250,16 @@ func SnowflakeConnectorProfile_IsConstruct(x interface{}) *bool {
 
 // Returns true if the construct was created by CDK, and false otherwise.
 // Experimental.
-func SnowflakeConnectorProfile_IsOwnedResource(construct constructs.IConstruct) *bool {
+func GoogleBigQueryConnectorProfile_IsOwnedResource(construct constructs.IConstruct) *bool {
 	_init_.Initialize()
 
-	if err := validateSnowflakeConnectorProfile_IsOwnedResourceParameters(construct); err != nil {
+	if err := validateGoogleBigQueryConnectorProfile_IsOwnedResourceParameters(construct); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdklabs/cdk-appflow.SnowflakeConnectorProfile",
+		"@cdklabs/cdk-appflow.GoogleBigQueryConnectorProfile",
 		"isOwnedResource",
 		[]interface{}{construct},
 		&returns,
@@ -288,16 +270,16 @@ func SnowflakeConnectorProfile_IsOwnedResource(construct constructs.IConstruct) 
 
 // Check whether the given construct is a Resource.
 // Experimental.
-func SnowflakeConnectorProfile_IsResource(construct constructs.IConstruct) *bool {
+func GoogleBigQueryConnectorProfile_IsResource(construct constructs.IConstruct) *bool {
 	_init_.Initialize()
 
-	if err := validateSnowflakeConnectorProfile_IsResourceParameters(construct); err != nil {
+	if err := validateGoogleBigQueryConnectorProfile_IsResourceParameters(construct); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdklabs/cdk-appflow.SnowflakeConnectorProfile",
+		"@cdklabs/cdk-appflow.GoogleBigQueryConnectorProfile",
 		"isResource",
 		[]interface{}{construct},
 		&returns,
@@ -306,25 +288,25 @@ func SnowflakeConnectorProfile_IsResource(construct constructs.IConstruct) *bool
 	return returns
 }
 
-func (s *jsiiProxy_SnowflakeConnectorProfile) ApplyRemovalPolicy(policy awscdk.RemovalPolicy) {
-	if err := s.validateApplyRemovalPolicyParameters(policy); err != nil {
+func (g *jsiiProxy_GoogleBigQueryConnectorProfile) ApplyRemovalPolicy(policy awscdk.RemovalPolicy) {
+	if err := g.validateApplyRemovalPolicyParameters(policy); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
-		s,
+		g,
 		"applyRemovalPolicy",
 		[]interface{}{policy},
 	)
 }
 
-func (s *jsiiProxy_SnowflakeConnectorProfile) BuildConnectorProfileCredentials(props *ConnectorProfileProps) *awsappflow.CfnConnectorProfile_ConnectorProfileCredentialsProperty {
-	if err := s.validateBuildConnectorProfileCredentialsParameters(props); err != nil {
+func (g *jsiiProxy_GoogleBigQueryConnectorProfile) BuildConnectorProfileCredentials(props *ConnectorProfileProps) *awsappflow.CfnConnectorProfile_ConnectorProfileCredentialsProperty {
+	if err := g.validateBuildConnectorProfileCredentialsParameters(props); err != nil {
 		panic(err)
 	}
 	var returns *awsappflow.CfnConnectorProfile_ConnectorProfileCredentialsProperty
 
 	_jsii_.Invoke(
-		s,
+		g,
 		"buildConnectorProfileCredentials",
 		[]interface{}{props},
 		&returns,
@@ -333,14 +315,14 @@ func (s *jsiiProxy_SnowflakeConnectorProfile) BuildConnectorProfileCredentials(p
 	return returns
 }
 
-func (s *jsiiProxy_SnowflakeConnectorProfile) BuildConnectorProfileProperties(props *ConnectorProfileProps) *awsappflow.CfnConnectorProfile_ConnectorProfilePropertiesProperty {
-	if err := s.validateBuildConnectorProfilePropertiesParameters(props); err != nil {
+func (g *jsiiProxy_GoogleBigQueryConnectorProfile) BuildConnectorProfileProperties(props *ConnectorProfileProps) *awsappflow.CfnConnectorProfile_ConnectorProfilePropertiesProperty {
+	if err := g.validateBuildConnectorProfilePropertiesParameters(props); err != nil {
 		panic(err)
 	}
 	var returns *awsappflow.CfnConnectorProfile_ConnectorProfilePropertiesProperty
 
 	_jsii_.Invoke(
-		s,
+		g,
 		"buildConnectorProfileProperties",
 		[]interface{}{props},
 		&returns,
@@ -349,11 +331,11 @@ func (s *jsiiProxy_SnowflakeConnectorProfile) BuildConnectorProfileProperties(pr
 	return returns
 }
 
-func (s *jsiiProxy_SnowflakeConnectorProfile) GeneratePhysicalName() *string {
+func (g *jsiiProxy_GoogleBigQueryConnectorProfile) GeneratePhysicalName() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		s,
+		g,
 		"generatePhysicalName",
 		nil, // no parameters
 		&returns,
@@ -362,14 +344,14 @@ func (s *jsiiProxy_SnowflakeConnectorProfile) GeneratePhysicalName() *string {
 	return returns
 }
 
-func (s *jsiiProxy_SnowflakeConnectorProfile) GetResourceArnAttribute(arnAttr *string, arnComponents *awscdk.ArnComponents) *string {
-	if err := s.validateGetResourceArnAttributeParameters(arnAttr, arnComponents); err != nil {
+func (g *jsiiProxy_GoogleBigQueryConnectorProfile) GetResourceArnAttribute(arnAttr *string, arnComponents *awscdk.ArnComponents) *string {
+	if err := g.validateGetResourceArnAttributeParameters(arnAttr, arnComponents); err != nil {
 		panic(err)
 	}
 	var returns *string
 
 	_jsii_.Invoke(
-		s,
+		g,
 		"getResourceArnAttribute",
 		[]interface{}{arnAttr, arnComponents},
 		&returns,
@@ -378,14 +360,14 @@ func (s *jsiiProxy_SnowflakeConnectorProfile) GetResourceArnAttribute(arnAttr *s
 	return returns
 }
 
-func (s *jsiiProxy_SnowflakeConnectorProfile) GetResourceNameAttribute(nameAttr *string) *string {
-	if err := s.validateGetResourceNameAttributeParameters(nameAttr); err != nil {
+func (g *jsiiProxy_GoogleBigQueryConnectorProfile) GetResourceNameAttribute(nameAttr *string) *string {
+	if err := g.validateGetResourceNameAttributeParameters(nameAttr); err != nil {
 		panic(err)
 	}
 	var returns *string
 
 	_jsii_.Invoke(
-		s,
+		g,
 		"getResourceNameAttribute",
 		[]interface{}{nameAttr},
 		&returns,
@@ -394,11 +376,11 @@ func (s *jsiiProxy_SnowflakeConnectorProfile) GetResourceNameAttribute(nameAttr 
 	return returns
 }
 
-func (s *jsiiProxy_SnowflakeConnectorProfile) ToString() *string {
+func (g *jsiiProxy_GoogleBigQueryConnectorProfile) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		s,
+		g,
 		"toString",
 		nil, // no parameters
 		&returns,
@@ -407,12 +389,12 @@ func (s *jsiiProxy_SnowflakeConnectorProfile) ToString() *string {
 	return returns
 }
 
-func (s *jsiiProxy_SnowflakeConnectorProfile) TryAddNodeDependency(scope constructs.IConstruct, resource interface{}) {
-	if err := s.validateTryAddNodeDependencyParameters(scope, resource); err != nil {
+func (g *jsiiProxy_GoogleBigQueryConnectorProfile) TryAddNodeDependency(scope constructs.IConstruct, resource interface{}) {
+	if err := g.validateTryAddNodeDependencyParameters(scope, resource); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
-		s,
+		g,
 		"tryAddNodeDependency",
 		[]interface{}{scope, resource},
 	)

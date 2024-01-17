@@ -12,7 +12,7 @@ type MicrosoftSharepointOnlineObject struct {
 	// An array of Microsoft Sharepoint Online site drives from which the documents are to be retrieved.
 	//
 	// Note: each drive requires full name starting with 'drives/'.
-	// Deprecated: . This property is deprecated and will be removed in a future release. Use {@link entities} instead
+	// Deprecated: . This property is deprecated and will be removed in a future release. Use {@link entities } instead
 	Drives *[]*string `field:"optional" json:"drives" yaml:"drives"`
 	// An array of Microsoft Sharepoint Online site entities from which the documents are to be retrieved.
 	//

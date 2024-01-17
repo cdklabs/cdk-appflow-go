@@ -6,7 +6,7 @@ type RedshiftDestinationProps struct {
 	// A Redshift table object (optionally with the schema).
 	// Experimental.
 	Object *RedshiftDestinationObject `field:"required" json:"object" yaml:"object"`
-	// An instance of the @type RedshiftConnectorProfile.
+	// An instance of the.
 	// Experimental.
 	Profile RedshiftConnectorProfile `field:"required" json:"profile" yaml:"profile"`
 	// The settings that determine how Amazon AppFlow handles an error when placing data in the Salesforce destination.

@@ -24,7 +24,7 @@ type TriggeredFlowBaseProps struct {
 	Transforms *[]ITransform `field:"optional" json:"transforms" yaml:"transforms"`
 	// Experimental.
 	Validations *[]IValidation `field:"optional" json:"validations" yaml:"validations"`
-	// Deprecated: . This property is deprecated and will be removed in a future release. Use {@link status} instead
+	// Deprecated: . This property is deprecated and will be removed in a future release. Use {@link status } instead
 	AutoActivate *bool `field:"optional" json:"autoActivate" yaml:"autoActivate"`
 	// The status to set on the flow.
 	//

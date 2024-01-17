@@ -29,7 +29,7 @@ type SnowflakeConnectorProfileProps struct {
 	Warehouse *string `field:"required" json:"warehouse" yaml:"warehouse"`
 	// Details of the Snowflake Storage Integration.
 	//
-	// When provided, this construct will automatically create an IAM Role allowing access to the S3 Bucket which will be available as a [integrationROle property]{@link SnowflakeConnectorProfile#integrationRole}
+	// When provided, this construct will automatically create an IAM Role allowing access to the S3 Bucket which will be available as a [integrationROle property]{@link SnowflakeConnectorProfile#integrationRole }
 	//
 	// For details of the integration see {@link https://docs.snowflake.com/en/user-guide/data-load-s3-config-storage-integration}
 	// Experimental.
