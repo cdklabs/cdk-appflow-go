@@ -609,6 +609,60 @@ func init() {
 		"@cdklabs/cdk-appflow.JdbcSmallDataScaleSourceProps",
 		reflect.TypeOf((*JdbcSmallDataScaleSourceProps)(nil)).Elem(),
 	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/cdk-appflow.MailchimpApiVersion",
+		reflect.TypeOf((*MailchimpApiVersion)(nil)).Elem(),
+		map[string]interface{}{
+			"V3": MailchimpApiVersion_V3,
+		},
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.MailchimpConnectorProfile",
+		reflect.TypeOf((*MailchimpConnectorProfile)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "arn", GoGetter: "Arn"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileCredentials", GoMethod: "BuildConnectorProfileCredentials"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileProperties", GoMethod: "BuildConnectorProfileProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "credentials", GoGetter: "Credentials"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "tryAddNodeDependency", GoMethod: "TryAddNodeDependency"},
+		},
+		func() interface{} {
+			j := jsiiProxy_MailchimpConnectorProfile{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ConnectorProfileBase)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.MailchimpConnectorProfileProps",
+		reflect.TypeOf((*MailchimpConnectorProfileProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.MailchimpSource",
+		reflect.TypeOf((*MailchimpSource)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "bind", GoMethod: "Bind"},
+			_jsii_.MemberProperty{JsiiProperty: "connectorType", GoGetter: "ConnectorType"},
+		},
+		func() interface{} {
+			j := jsiiProxy_MailchimpSource{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ISource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.MailchimpSourceProps",
+		reflect.TypeOf((*MailchimpSourceProps)(nil)).Elem(),
+	)
 	_jsii_.RegisterStruct(
 		"@cdklabs/cdk-appflow.MapAllConfig",
 		reflect.TypeOf((*MapAllConfig)(nil)).Elem(),
