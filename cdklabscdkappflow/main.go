@@ -256,6 +256,77 @@ func init() {
 		},
 	)
 	_jsii_.RegisterEnum(
+		"@cdklabs/cdk-appflow.GoogleAdsApiVersion",
+		reflect.TypeOf((*GoogleAdsApiVersion)(nil)).Elem(),
+		map[string]interface{}{
+			"V13": GoogleAdsApiVersion_V13,
+			"V14": GoogleAdsApiVersion_V14,
+		},
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.GoogleAdsConnectorProfile",
+		reflect.TypeOf((*GoogleAdsConnectorProfile)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "arn", GoGetter: "Arn"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileCredentials", GoMethod: "BuildConnectorProfileCredentials"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileProperties", GoMethod: "BuildConnectorProfileProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "credentials", GoGetter: "Credentials"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "tryAddNodeDependency", GoMethod: "TryAddNodeDependency"},
+		},
+		func() interface{} {
+			j := jsiiProxy_GoogleAdsConnectorProfile{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ConnectorProfileBase)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.GoogleAdsConnectorProfileProps",
+		reflect.TypeOf((*GoogleAdsConnectorProfileProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.GoogleAdsOAuthEndpoints",
+		reflect.TypeOf((*GoogleAdsOAuthEndpoints)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.GoogleAdsOAuthFlow",
+		reflect.TypeOf((*GoogleAdsOAuthFlow)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.GoogleAdsOAuthSettings",
+		reflect.TypeOf((*GoogleAdsOAuthSettings)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.GoogleAdsRefreshTokenGrantFlow",
+		reflect.TypeOf((*GoogleAdsRefreshTokenGrantFlow)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.GoogleAdsSource",
+		reflect.TypeOf((*GoogleAdsSource)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "bind", GoMethod: "Bind"},
+			_jsii_.MemberProperty{JsiiProperty: "connectorType", GoGetter: "ConnectorType"},
+		},
+		func() interface{} {
+			j := jsiiProxy_GoogleAdsSource{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ISource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.GoogleAdsSourceProps",
+		reflect.TypeOf((*GoogleAdsSourceProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterEnum(
 		"@cdklabs/cdk-appflow.GoogleAnalytics4ApiVersion",
 		reflect.TypeOf((*GoogleAnalytics4ApiVersion)(nil)).Elem(),
 		map[string]interface{}{
