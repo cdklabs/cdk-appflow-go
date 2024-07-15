@@ -259,8 +259,7 @@ func init() {
 		"@cdklabs/cdk-appflow.GoogleAdsApiVersion",
 		reflect.TypeOf((*GoogleAdsApiVersion)(nil)).Elem(),
 		map[string]interface{}{
-			"V13": GoogleAdsApiVersion_V13,
-			"V14": GoogleAdsApiVersion_V14,
+			"V16": GoogleAdsApiVersion_V16,
 		},
 	)
 	_jsii_.RegisterClass(

@@ -7,8 +7,6 @@ type GoogleAdsApiVersion string
 
 const (
 	// Experimental.
-	GoogleAdsApiVersion_V13 GoogleAdsApiVersion = "V13"
-	// Experimental.
-	GoogleAdsApiVersion_V14 GoogleAdsApiVersion = "V14"
+	GoogleAdsApiVersion_V16 GoogleAdsApiVersion = "V16"
 )
 
