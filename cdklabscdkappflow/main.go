@@ -63,6 +63,53 @@ func init() {
 		"@cdklabs/cdk-appflow.AmazonRdsForPostgreSqlObject",
 		reflect.TypeOf((*AmazonRdsForPostgreSqlObject)(nil)).Elem(),
 	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.AsanaConnectorProfile",
+		reflect.TypeOf((*AsanaConnectorProfile)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "arn", GoGetter: "Arn"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileCredentials", GoMethod: "BuildConnectorProfileCredentials"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileProperties", GoMethod: "BuildConnectorProfileProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "credentials", GoGetter: "Credentials"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "tryAddNodeDependency", GoMethod: "TryAddNodeDependency"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AsanaConnectorProfile{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ConnectorProfileBase)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.AsanaConnectorProfileProps",
+		reflect.TypeOf((*AsanaConnectorProfileProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.AsanaSource",
+		reflect.TypeOf((*AsanaSource)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "bind", GoMethod: "Bind"},
+			_jsii_.MemberProperty{JsiiProperty: "connectorType", GoGetter: "ConnectorType"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AsanaSource{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ISource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.AsanaSourceProps",
+		reflect.TypeOf((*AsanaSourceProps)(nil)).Elem(),
+	)
 	_jsii_.RegisterEnum(
 		"@cdklabs/cdk-appflow.ConnectionMode",
 		reflect.TypeOf((*ConnectionMode)(nil)).Elem(),
