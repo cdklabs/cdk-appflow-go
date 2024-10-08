@@ -19,7 +19,5 @@ type ScheduleProperties struct {
 	Offset awscdk.Duration `field:"optional" json:"offset" yaml:"offset"`
 	// Experimental.
 	StartTime *time.Time `field:"optional" json:"startTime" yaml:"startTime"`
-	// Experimental.
-	Timezone *string `field:"optional" json:"timezone" yaml:"timezone"`
 }
 
