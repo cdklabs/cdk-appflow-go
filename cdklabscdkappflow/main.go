@@ -516,6 +516,96 @@ func init() {
 		"@cdklabs/cdk-appflow.GoogleBigQuerySourceProps",
 		reflect.TypeOf((*GoogleBigQuerySourceProps)(nil)).Elem(),
 	)
+	_jsii_.RegisterEnum(
+		"@cdklabs/cdk-appflow.HubSpotApiVersion",
+		reflect.TypeOf((*HubSpotApiVersion)(nil)).Elem(),
+		map[string]interface{}{
+			"V1": HubSpotApiVersion_V1,
+			"V2": HubSpotApiVersion_V2,
+			"V3": HubSpotApiVersion_V3,
+			"V4": HubSpotApiVersion_V4,
+		},
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.HubSpotConnectorProfile",
+		reflect.TypeOf((*HubSpotConnectorProfile)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "arn", GoGetter: "Arn"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileCredentials", GoMethod: "BuildConnectorProfileCredentials"},
+			_jsii_.MemberMethod{JsiiMethod: "buildConnectorProfileProperties", GoMethod: "BuildConnectorProfileProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "credentials", GoGetter: "Credentials"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceArnAttribute", GoMethod: "GetResourceArnAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getResourceNameAttribute", GoMethod: "GetResourceNameAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "tryAddNodeDependency", GoMethod: "TryAddNodeDependency"},
+		},
+		func() interface{} {
+			j := jsiiProxy_HubSpotConnectorProfile{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ConnectorProfileBase)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.HubSpotConnectorProfileProps",
+		reflect.TypeOf((*HubSpotConnectorProfileProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.HubSpotDestination",
+		reflect.TypeOf((*HubSpotDestination)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "bind", GoMethod: "Bind"},
+			_jsii_.MemberProperty{JsiiProperty: "connectorType", GoGetter: "ConnectorType"},
+		},
+		func() interface{} {
+			j := jsiiProxy_HubSpotDestination{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IDestination)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.HubSpotDestinationProps",
+		reflect.TypeOf((*HubSpotDestinationProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.HubSpotOAuthEndpoints",
+		reflect.TypeOf((*HubSpotOAuthEndpoints)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.HubSpotOAuthFlow",
+		reflect.TypeOf((*HubSpotOAuthFlow)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.HubSpotOAuthSettings",
+		reflect.TypeOf((*HubSpotOAuthSettings)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.HubSpotRefreshTokenGrantFlow",
+		reflect.TypeOf((*HubSpotRefreshTokenGrantFlow)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdklabs/cdk-appflow.HubSpotSource",
+		reflect.TypeOf((*HubSpotSource)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "bind", GoMethod: "Bind"},
+			_jsii_.MemberProperty{JsiiProperty: "connectorType", GoGetter: "ConnectorType"},
+		},
+		func() interface{} {
+			j := jsiiProxy_HubSpotSource{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ISource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdklabs/cdk-appflow.HubSpotSourceProps",
+		reflect.TypeOf((*HubSpotSourceProps)(nil)).Elem(),
+	)
 	_jsii_.RegisterInterface(
 		"@cdklabs/cdk-appflow.IConnectorProfile",
 		reflect.TypeOf((*IConnectorProfile)(nil)).Elem(),
